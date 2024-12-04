@@ -6,6 +6,14 @@ window.onload = function() {
     const day = String(today.getDate()).padStart(2, '0');
     const formattedToday = `${year}-${month}-${day}`;
     document.getElementById('start-date').value = formattedToday;
+    
+    // Add event listener for Enter key on days input
+    document.getElementById('days').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission
+            calculateDate();
+        }
+    });
 }
 
 function calculateDate() {
