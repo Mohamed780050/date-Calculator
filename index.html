@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +10,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Date Calculator</h1>
-        
+        <div class="flex">
+            <h1 data-lang="title">Date Calculator</h1>
+            <span class="lang" onclick="changeDirection()">EN</span>
+        </div>
         <div class="calculator-section">
             <div class="input-group">
-                <label for="start-date">Select Start Date:</label>
+                <label for="start-date" data-lang="select">Select Start Date:</label>
                 <div class="date-input-wrapper">
                     <input type="date" id="start-date" style="opacity: 0; position: absolute;">
                     <input type="text" id="date-display" readonly>
@@ -23,14 +25,14 @@
             </div>
             
             <div class="input-group">
-                <label for="days">Number of Days to Add:</label>
-                <input type="number" id="days" min="1" placeholder="Enter number of days">
+                <label for="days" data-lang="days">Number of Days to Add:</label>
+                <input type="number" id="days" min="1"data-lang="placeholder" placeholder="Enter number of days">
             </div>
             
-            <button onclick="calculateDate()">Calculate</button>
+            <button data-lang="calculateDate" onclick="calculateDate()">Calculate</button>
             
             <div class="result" id="result">
-                <h2>Result:</h2>
+                <h2 data-lang="result">Result:</h2>
                 <p id="result-date"></p>
                 <p id="result-date-words" class="date-words"></p>
             </div>
