@@ -16,7 +16,8 @@
             <div class="input-group">
                 <label for="start-date">Select Start Date:</label>
                 <div class="date-input-wrapper">
-                    <input type="date" id="start-date">
+                    <input type="date" id="start-date" style="opacity: 0; position: absolute;">
+                    <input type="text" id="date-display" readonly>
                     <span class="calendar-icon">📅</span>
                 </div>
             </div>
@@ -31,6 +32,7 @@
             <div class="result" id="result">
                 <h2>Result:</h2>
                 <p id="result-date"></p>
+                <p id="result-date-words" class="date-words"></p>
             </div>
         </div>
     </div>

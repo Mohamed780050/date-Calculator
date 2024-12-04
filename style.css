@@ -81,6 +81,22 @@ input:focus {
     cursor: pointer;
 }
 
+.date-input-wrapper input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 40px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.date-input-wrapper input[type="text"]:focus {
+    outline: none;
+    border-color: #764ba2;
+}
+
 .calendar-icon {
     position: absolute;
     right: 10px;
